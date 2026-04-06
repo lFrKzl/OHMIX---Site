@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 export default function About() {
   return (
     <section id="sobre" className="py-24 bg-azul-escuro text-white relative overflow-hidden">
@@ -7,7 +9,11 @@ export default function About() {
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div 
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="flex-1"
           >
             <div className="inline-block px-4 py-1 bg-dourado/20 text-dourado rounded-full text-sm font-bold mb-6">
@@ -24,9 +30,13 @@ export default function About() {
                 Nossa missão é oferecer soluções completas e inteligentes, desde manutenções preventivas essenciais até os mais sofisticados projetos de automação residencial e energia solar fotovoltaica.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div 
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="flex-1 relative"
           >
             <div className="relative z-10 aspect-square max-w-md mx-auto flex flex-col items-center justify-center p-4">
@@ -38,7 +48,7 @@ export default function About() {
               />
               <span className="text-white font-bold text-4xl tracking-[0.3em] mt-8 drop-shadow-lg">OHMIX</span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
