@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { 
   Plug, 
   Home, 
@@ -63,25 +62,18 @@ export default function Services() {
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="text-center mb-20">
-          <motion.span 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+          <span 
             className="text-dourado font-bold tracking-widest uppercase text-sm mb-2 block"
           >
             Excelência Técnica
-          </motion.span>
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold text-azul-escuro uppercase">Nossos Serviços</h2>
           <div className="w-24 h-1.5 bg-dourado mx-auto mt-6 rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <motion.div 
+          {services.map((service) => (
+            <div 
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -12 }}
               className="relative bg-white p-8 rounded-2xl text-center transition-all shadow-[0_10px_40px_-15px_rgba(10,29,55,0.1)] hover:shadow-[0_20px_60px_-15px_rgba(197,160,89,0.2)] border border-gray-100 group overflow-hidden flex flex-col h-full"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-azul-escuro to-dourado opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -99,7 +91,7 @@ export default function Services() {
               <div className="pt-4 border-t border-gray-50 opacity-0 group-hover:opacity-100 transition-opacity mt-auto">
                 <span className="text-dourado text-xs font-bold uppercase tracking-wider">Consultar Especialista</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,5 +1,3 @@
-import { motion } from "motion/react";
-
 export default function Hero() {
   return (
     <section 
@@ -12,27 +10,17 @@ export default function Hero() {
       }}
     >
       <div className="container mx-auto px-6 max-w-7xl">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <h1 
           className="text-4xl md:text-6xl font-bold mb-4"
         >
           Tecnologia e Segurança em Soluções Elétricas
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        </h1>
+        <p 
           className="text-xl md:text-2xl text-dourado mb-10"
         >
           Conectando sua residência e comércio ao futuro.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
+        </p>
+        <div>
           <a 
             href="https://wa.me/5511994001655" 
             target="_blank" 
@@ -41,7 +29,7 @@ export default function Hero() {
           >
             Solicitar Orçamento
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

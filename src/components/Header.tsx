@@ -1,5 +1,3 @@
-import { motion } from "motion/react";
-
 export default function Header() {
   const navItems = [
     { name: "Início", href: "#inicio" },
@@ -11,10 +9,8 @@ export default function Header() {
   return (
     <header className="bg-azul-escuro border-b-3 border-dourado fixed w-full top-0 z-50 py-4">
       <div className="container mx-auto px-6 flex justify-between items-center max-w-7xl">
-        <motion.a 
+        <a 
           href="#inicio"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
           className="flex flex-col items-center"
         >
           <img 
@@ -24,15 +20,12 @@ export default function Header() {
             referrerPolicy="no-referrer"
           />
           <span className="text-white font-bold text-sm tracking-widest mt-1">OHMIX</span>
-        </motion.a>
+        </a>
         <nav>
           <ul className="hidden md:flex space-x-8">
-            {navItems.map((item, index) => (
-              <motion.li 
+            {navItems.map((item) => (
+              <li 
                 key={item.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
               >
                 <a 
                   href={item.href} 
@@ -40,7 +33,7 @@ export default function Header() {
                 >
                   {item.name}
                 </a>
-              </motion.li>
+              </li>
             ))}
           </ul>
         </nav>
