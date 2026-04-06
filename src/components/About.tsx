@@ -41,7 +41,7 @@ export default function About() {
           >
             <div className="relative z-10 aspect-square max-w-md mx-auto flex flex-col items-center justify-center p-4">
               <img 
-                src="/favicon.png" 
+                src="https://drive.google.com/thumbnail?id=1bvEn-NxDoccCBgEjeoNHvuWihM14ar4x&sz=w1000" 
                 alt="OHMIX Logo" 
                 className="w-full h-auto object-contain transition-transform duration-700 hover:scale-105 drop-shadow-2xl"
                 referrerPolicy="no-referrer"

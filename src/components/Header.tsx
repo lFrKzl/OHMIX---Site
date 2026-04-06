@@ -18,7 +18,7 @@ export default function Header() {
           className="flex flex-col items-center"
         >
           <img 
-            src="/favicon.png" 
+            src="https://drive.google.com/thumbnail?id=1bvEn-NxDoccCBgEjeoNHvuWihM14ar4x&sz=w800" 
             alt="OHMIX Logo" 
             className="h-10 w-auto object-contain"
             referrerPolicy="no-referrer"
