@@ -24,10 +24,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   public render() {
-    const { hasError, error } = this.state;
-    const { children } = this.props;
-
-    if (hasError) {
+    if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
           <div className="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full">
@@ -36,7 +33,7 @@ export class ErrorBoundary extends Component<Props, State> {
               Ocorreu um erro ao carregar a aplicação. Por favor, verifique os detalhes abaixo:
             </p>
             <pre className="bg-gray-100 p-4 rounded overflow-auto text-sm text-red-800 whitespace-pre-wrap">
-              {error?.toString()}
+              {this.state.error?.toString()}
             </pre>
             <button 
               onClick={() => window.location.reload()}
@@ -49,6 +46,6 @@ export class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-    return children;
+    return this.props.children;
   }
 }
