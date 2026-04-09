@@ -19,11 +19,11 @@ export default function Footer() {
           </a>
 
           {/* Email */}
-          <a href="mailto:contato@ohmix.com" className="flex flex-col items-center group">
+          <a href="mailto:contato@ohmix.com.br" className="flex flex-col items-center group">
             <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-[#42b3f5] group-hover:scale-110 transition-all duration-300 mb-4 shadow-lg border border-white/10 group-hover:border-transparent">
               <Mail size={32} className="text-dourado group-hover:text-white transition-colors" />
             </div>
-            <span className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors tracking-wide">contato@ohmix.com</span>
+            <span className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors tracking-wide">contato@ohmix.com.br</span>
           </a>
 
           {/* Instagram */}
